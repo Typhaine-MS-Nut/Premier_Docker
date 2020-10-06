@@ -9,12 +9,12 @@ jobs:
     name: Push Docker image to Docker Hub 
     runs-on: ubuntu-latest
     steps:
-  - name: Check out the repo 
-    uses: actions/checkout@v2
-  - name: Push to Docker Hub
-    uses: docker/build-push-action@v1 
-    with:
-    username: ${{Mon_nom_secret}} 
-    password: ${{Poney}} 
-    repository: Typhaine-MS-Nut/Premier_Docker
-    tags: "latest,r-4.0.2,v1"
+    - name: Check out the repo 
+      uses: actions/checkout@v2
+    - name: Push to Docker Hub
+      uses: docker/build-push-action@v1 
+      with:
+        username: ${{Mon_nom_secret}} 
+        password: ${{Poney}} 
+        repository: Typhaine-MS-Nut/Premier_Docker
+        tags: "latest,r-4.0.2,v1"
