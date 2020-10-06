@@ -12,7 +12,8 @@ steps:
 - name: Check out the repo 
 uses: actions/checkout@v2
 - name: Push to Docker Hub
-uses: docker/build-push-action@v1 with:
+uses: docker/build-push-action@v1 
+with:
 username: ${{Mon_nom_secret}} 
 password: ${{Poney}} 
 repository: Typhaine-MS-Nut/Premier_Docker
