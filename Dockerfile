@@ -3,4 +3,4 @@ COPY ./HelloDocker_0.1.0.tar.gz .
 RUN R CMD INSTALL HelloDocker_0.1.0.tar.gz
 RUN R -e 'install.packages("shinyWidgets")'
 RUN R -e 'install.packages("FactoMineR")'
-RUN R -e 'install.packages("Shiny")'
+RUN R -e 'install.packages("shiny")'
