@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 RUN apt-get update
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata && \
-apt-get install -y software-properties-common apt-utils curl wget  build-essential gfortran aptitude libreadline-dev xorg-dev libbz2-dev liblzma-dev libpcre++-dev libcurl4-openssl-dev openjdk-8-jdk && \ 
+apt-get install -y software-properties-common apt-utils curl wget  build-essential gfortran aptitude libreadline-dev xorg-dev libbz2-dev liblzma-dev libpcre++-dev libcurl4-openssl-dev openjdk-8-jdk wget&& \ 
 cp /etc/apt/sources.list /etc/apt/sources.list~ && \
 sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list && \
 apt-get update && \

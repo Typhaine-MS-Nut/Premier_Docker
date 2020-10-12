@@ -1,0 +1,24 @@
+proxy:
+  title: Typh Shiny Proxy
+  logo-url: file:/Documents/training-docker/Premier_Docker/shinyproxy-municipales/ardata-logo-inv.png
+  authentication: simple
+  port: 8080
+  admin-groups: scientists
+  users:
+  - name: jack
+    password: password
+    groups: scientists
+  - name: jeff
+    password: password
+    groups: mathematicians
+  specs:
+  - id: municipales
+    display-name: Municipales de Paris 2020
+    description: Application d'exploration des résultats des Municipales de Paris 2020
+    container-cmd: ["R", "-e", "shiny::runApp('/root/municipales-paris')"]
+    container-image: davidgohel/municipales-paris:v0
+    access-groups: [scientists]
+
+logging:
+  file:
+    shinyproxy.log
