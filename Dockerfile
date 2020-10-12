@@ -12,7 +12,7 @@ apt-get -y build-dep r-base
 RUN export PATH=$PATH:$JAVA_HOME/bin
   
 RUN apt-get build-dep r-base
-ARG  R_VERSION=3.6.3
+ARG R_VERSION=3.6.3
 RUN curl -O https://cran.rstudio.com/src/base/R-3/R-${R_VERSION}.tar.gz
 RUN tar -xzvf R-${R_VERSION}.tar.gz
 RUN cd R-${R_VERSION}
