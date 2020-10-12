@@ -1,4 +1,4 @@
-FROM ubunto:bionic-20200403
+FROM ubunto:18.04
 
 RUN apt-get update
 
@@ -9,7 +9,7 @@ sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list && \
 apt-get update && \
 apt-get -y build-dep r-base
   
-RUN apt-get build-dep r-base
+ARG apt-get build-dep r-base
 
 RUN R_VERSION=3.6.3
 RUN curl -O https://cran.rstudio.com/src/base/R-3/R-${R_VERSION}.tar.gz
