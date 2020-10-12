@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-apt-get update
+RUN apt-get update
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata && \
 apt-get install -y software-properties-common apt-utils curl wget  build-essential gfortran aptitude libreadline-dev xorg-dev libbz2-dev liblzma-dev && \
