@@ -1,6 +1,6 @@
 proxy:
-  title: Typh Shiny Proxy
-  logo-url: file:/Documents/training-docker/Premier_Docker/shinyproxy-municipales/ardata-logo-inv.png
+  title: ArData Shiny Proxy
+  logo-url: file:///Users/davidgohel/gitprojects/trainings/training-docker/codes/shinyproxy-municipales/ardata-logo-inv.png
   authentication: simple
   port: 8080
   admin-groups: scientists
